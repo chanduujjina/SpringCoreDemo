@@ -13,11 +13,23 @@ public class App
     {
        //define IOC Container
     	
-    	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+    	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml","beans1.xml");
     	
     	System.out.println(applicationContext.getBeanDefinitionCount());
     	HelloWorld world =	(HelloWorld) applicationContext.getBean("hello");
     	world.sayHello();
+    	
+    	Employee employee = (Employee) applicationContext.getBean("emp1");
+    
+    	System.out.println(employee);
+    	
+    	Employee2 employee2 = (Employee2) applicationContext.getBean("emp2");
+        
+    	System.out.println(employee2);
+    	
+    	HelloWorld1 world1 =	(HelloWorld1) applicationContext.getBean("hello1");
+    	world1.sayHello();
+    	
     	
     	
     }
