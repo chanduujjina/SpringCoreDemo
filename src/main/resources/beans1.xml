@@ -3,12 +3,54 @@
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
   
-   <bean name="hello1" class="com.demo.core.HelloWorld1">
+   <bean name="hello1" class="com.demo.core.HelloWorld1" scope="singleton">
    <property name="name" value="please practie spring core"/>
    </bean>
    
    
+   <bean name="xmlDemo1" class="com.demo.core.XmlDemo1">
+   <property name="type" value="main"/>
+     <property name="xmlDemo2" ref="xmlDemo"/>
+   </bean>
+   
+    <bean name="xmlDemo" class="com.demo.core.XmlDemo2">
+   <property name="type" value="dependent"/>
+    
+   </bean>
+   
+    <bean name="xmlDemo3" class="com.demo.core.XmlDemo3" autowire="byName">
+   <property name="type" value="main"/>
+   </bean>
+   
+   <bean name="xmldemo4" class="com.demo.core.XmlDemo4">
+   <property name="type" value="dependent"/>
+   </bean>
+   
+
+   <bean name="xmlDemo5" class="com.demo.core.XmlDemo5" autowire="byType">
+   <property name="type" value="main"/>
+   </bean>
+   
+   <bean name="xmlDemo6" class="com.demo.core.XmlDemo6">
+   <property name="type" value="dependent"/>
+   </bean>
+   
+    <bean name="xmlDemo7" class="com.demo.core.XmlDemo7" autowire="constructor">
+   <constructor-arg name="type" value="main"/>
+   </bean>
+   
+   <bean name="xmlDemo8" class="com.demo.core.XmlDemo8">
+   <property name="type" value="dependent"/>
+   </bean>
+   
+   <bean name="singletonDemo" class="com.demo.core.SingletonDemo" scope="singleton">
+   <property name="type" value="test"/>
+   </bean>
+   
+      <bean name="prototypeDemo" class="com.demo.core.ProtoTypeDemo" scope="prototype">
+   <property name="type" value="test"/>
+   </bean>
 
 </beans>
