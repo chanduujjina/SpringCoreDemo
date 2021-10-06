@@ -11,6 +11,8 @@ public class AnnatationDemoClient {
 		AnnatationDemo1 annatationDemo1 = (AnnatationDemo1) applicationContext.getBean("annatationDemo1");
 		
 		System.out.println(annatationDemo1);
+		
+	
 	}
 	
 	

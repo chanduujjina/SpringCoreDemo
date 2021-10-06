@@ -6,7 +6,7 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
    http://www.springframework.org/schema/context
-   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd" >
    
     <context:annotation-config/>
 
@@ -15,12 +15,37 @@
    <property name="type" value="main"/>
    </bean>
    
-   <bean name="annatationDemo3" class="com.demo.core.demo.AnnatationDemo2" primary="true">
+   <bean name="annatationDemo2" class="com.demo.core.demo.AnnatationDemo2">
    <property name="type" value="dependent2"/>
    </bean>
    
-      <bean name="annatationDemo4" class="com.demo.core.demo.AnnatationDemo2">
-   <property name="type" value="dependent1"/>
+   <bean name="annatationDemo3" class="com.demo.core.demo.AnnatationDemo3">
+   <property name="type" value="dependent3"/>
+   </bean>
+   
+    <bean name="annatationDemo3_v1" class="com.demo.core.demo.AnnatationDemo3">
+   <property name="type" value="dependent4"/>
+   </bean>
+    <bean name="annatationDemo4" class="com.demo.core.demo.AnnatationDemo4">
+   <property name="type" value="dependent5"/>
+   </bean>
+   
+    <bean name="annatationDemo4_v1" class="com.demo.core.demo.AnnatationDemo4" primary="true">
+   <property name="type" value="dependent6"/>
+   </bean>
+
+
+
+    <bean name="annatationConDIDemo" class="com.demo.core.demo.AnnatationConDIDemo">
+   <constructor-arg name="type" value="Main"/>
+   </bean>
+   
+     <bean name="annatationConDIDemo1" class="com.demo.core.demo.AnnatationConDIDemo1">
+   <constructor-arg name="type" value="dependent"/>
+   </bean>
+   
+    <bean name="annatationConDIDemo1_v1" class="com.demo.core.demo.AnnatationConDIDemo1">
+   <constructor-arg name="type" value="dependent2"/>
    </bean>
 
 </beans>

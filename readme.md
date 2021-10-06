@@ -75,3 +75,12 @@ Java based spring configuration
 
 Spring bean life cycle
 Customizing bean and call back methods in spring bean
+
+
+Day 5:
+Other annatation in Annation based configuration(@Resoure,@Autowire with qualifier)
+
+Auto detect beans
+Java based spring configuration
+
+Reading the data from property file(@value)
