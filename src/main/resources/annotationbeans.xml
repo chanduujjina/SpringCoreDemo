@@ -47,5 +47,17 @@
     <bean name="annatationConDIDemo1_v1" class="com.demo.core.demo.AnnatationConDIDemo1">
    <constructor-arg name="type" value="dependent2"/>
    </bean>
+   
+     <bean name="annatationDemo5" class="com.demo.core.demo.AnnatationDemo5">
+   <property name="type" value="main"/>
+   </bean>
+   
+   <bean name="annatationDemo6" class="com.demo.core.demo.AnnatationDemo6">
+   <property name="type" value="dependent1"/>
+   </bean>
+   
+      <bean name="annatationDemo6_v1" class="com.demo.core.demo.AnnatationDemo6">
+   <property name="type" value="dependent2"/>
+   </bean>
 
 </beans>

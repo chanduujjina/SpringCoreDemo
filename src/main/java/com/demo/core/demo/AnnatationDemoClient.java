@@ -12,6 +12,9 @@ public class AnnatationDemoClient {
 		
 		System.out.println(annatationDemo1);
 		
+		AnnatationDemo5 annatationDemo5 = (AnnatationDemo5) applicationContext.getBean("annatationDemo5");
+		System.out.println(annatationDemo5);
+		
 	
 	}
 	
